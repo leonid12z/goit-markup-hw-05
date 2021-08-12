@@ -15,7 +15,7 @@
   --fill-color: #afb1b8;
   --color-grey: rgba(47, 48, 58, 0.4);
   --color-white: rgba(255, 255, 255, 0.1);
-  --color-gradient:#C4C4C4;
+  --color-gradient: #c4c4c4;
 }
 
 body {
@@ -186,8 +186,6 @@ p {
 .hero {
   text-align: center;
   padding: 200px 0;
-
-  /* background-color: var(--background-color); */
 }
 
 .hero {
@@ -196,23 +194,47 @@ p {
   margin-left: auto;
   margin-right: auto;
 
-  background-image: linear-gradient(to right, 
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/zaglavnay.img.jpg");
 
-   rgba(196, 196, 196, 1),  
-
-   rgba(47, 48, 58, 0.4) 
-   
-  ), 
-  
-  url("../images/zaglavnay.img.jpg");
-   
- /* outline: 1px solid black; */
+  /* outline: 1px solid black; */
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;  
+  background-size: cover;
 }
 
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+
+  top: 0;
+  left: 0;
+
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  height: 528px;
+  width: 561px;
+
+  background: var(--brand-color);
+}
 
 /*Эффективное решение*/
 .hero-contaner {
@@ -624,7 +646,6 @@ p {
 
 /* .pic-container:hover, */
 .pic-text:hover {
-
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }

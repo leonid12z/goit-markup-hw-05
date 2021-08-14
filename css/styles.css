@@ -256,7 +256,7 @@ p {
   background-position: center;
   background-size: cover;
 }
-
+/* Modalka */
 .backdrop {
   position: fixed;
   width: 100%;
@@ -302,6 +302,9 @@ p {
   border-radius: 50%;
   background: var(--brand-color);
   border: 1px solid rgba(0, 0, 0, 0.2);
+
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   cursor: pointer;
 }
@@ -422,12 +425,68 @@ p {
   color: var(--back-color);
 }
 
-/*Изображение pic*/
+/* Чем мы занимаемся Изображение pic*/
+
+.pic-title  {
+display: flex;
+align-items: center;
+justify-content: center;
+
+position: absolute;
+width: 370px;
+height: 70px;
+margin-bottom: -220px;
+
+
+color: var(--brand-color);
+background: rgba(47, 48, 58, 0.8);
+}
+
+.pic-title-pic{
+display: flex;
+align-items: center;
+justify-content: center;
+
+position: absolute;
+width: 370px;
+height: 70px;
+margin-left: 400px;
+margin-bottom: -220px;
+
+
+color: var(--brand-color);
+background: rgba(47, 48, 58, 0.8);
+}
+
+.pic-title-tex{
+display: flex;
+align-items: center;
+justify-content: center;
+
+position: absolute;
+width: 370px;
+height: 70px;
+margin-left: 800px;
+margin-bottom: -220px;
+
+
+color: var(--brand-color);
+background: rgba(47, 48, 58, 0.8);
+}
 
 .pic {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.pic-title{
+
+font-size: 14px;
+line-height: 1.14;
+
+letter-spacing: 0.03em;
+text-transform: uppercase;
 }
 
 .section-title {
@@ -725,8 +784,7 @@ p {
   margin-right: -30px;
 
   cursor: pointer;
-  overflow: hidden;
-
+   
   transition-property: background;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -741,13 +799,14 @@ p {
   border: 1px solid var(--color-strip);
 }
 
-.pic-text {
-  position: relative;
-}
+ .pic-icon {
+  position: relative;  
+  overflow: hidden;
+} 
 
-/* .pic-text::before{
+ .pic-icon::before{
   display: inline-block;
-  content: "";
+  content: ""; 
 
   position: absolute;
   top: 0;
@@ -756,28 +815,25 @@ p {
   height: 100%; 
   background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(-100%);
+  transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+} 
 
-} */
+.pic-container:hover .pic-icon::before{
+  opacity: 1;
+  transform: translateY(0);
+}
 
 .warpper-text {
   padding: 24px 20px;
 }
 
-/* .pic-container:hover, */
-.pic-text:hover .warpper-text {
+/* .pic-text:hover */
+.pic-text:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 
-  /* opacity: 1;
-
-    transform: translateY(0); */
 }
-
-/* .pic-text:hover::before{
-    opacity: 1;
-  } */
 
 /*Тексты заголовков 2-й лист*/
 /*Технокряк*/ /*Постер*/ /*Ресторан*/

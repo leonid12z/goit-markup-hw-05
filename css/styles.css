@@ -200,7 +200,7 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-item:hover {
+.icon-item :hover {
   fill: var(--primary-text-color);
 }
 
@@ -428,44 +428,69 @@ p {
 /* Чем мы занимаемся Изображение pic*/
 
 .pic {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.pic-title{
+.pic-title {
+  font-size: 14px;
+  line-height: 1.14;
 
-font-size: 14px;
-line-height: 1.14;
-
-letter-spacing: 0.03em;
-text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .pic-title {
-position: relative;
+  position: relative;
 
-display: inline-block;
+  display: inline-block;
 }
 
+.span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-.span{
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  top: 1427px;
+  left: 81px;
 
-display: flex;
-align-items: center;
-justify-content: center;
+  color: var(--brand-color);
+  background: rgba(47, 48, 58, 0.8);
+}
 
-position: absolute;
-width: 370px;
-height: 70px;
-top: 10px;
+.span-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-color: var(--brand-color);
-background: rgba(47, 48, 58, 0.8);
-} 
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  top: 1427px;
+  left: 476px;
 
+  color: var(--brand-color);
+  background: rgba(47, 48, 58, 0.8);
+}
 
+.span-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: absolute;
+  width: 370px;
+  height: 70px;
+  top: 1427px;
+  left: 869px;
+
+  color: var(--brand-color);
+  background: rgba(47, 48, 58, 0.8);
+}
 
 .section-title {
   margin-bottom: 50px;
@@ -763,10 +788,6 @@ background: rgba(47, 48, 58, 0.8);
   margin-right: -30px;
 
   cursor: pointer;
-   
-  transition-property: background;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pic-text {
@@ -778,30 +799,30 @@ background: rgba(47, 48, 58, 0.8);
   border: 1px solid var(--color-strip);
 }
 
- .pic-icon {
-  position: relative; 
-   
-  overflow: hidden;
-} 
+.pic-icon {
+  position: relative;
 
- .pic-icon::before{
+  overflow: hidden;
+}
+
+.pic-icon::before {
   display: inline-block;
-  content: ""; 
+  content: "";
 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; 
-  background-color: rgba(33, 150, 243, 0.9); 
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(100%); 
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-} 
-
-.pic-container:hover .pic-icon::before{
-   opacity: 1; 
-   transform: translateY(0);  
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* Исправить ошибку */
+.pic-container:hover .pic-icon::before {
+  opacity: 1;
+  transform: translateY(-100%);
 }
 
 /* .pic-text:hover */
@@ -810,7 +831,11 @@ background: rgba(47, 48, 58, 0.8);
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.card-text{
+.card {
+  display: block;
+}
+
+.card-text {
   position: absolute;
   top: 100%;
   left: 0;
@@ -819,15 +844,15 @@ background: rgba(47, 48, 58, 0.8);
   height: 100%;
   padding: 63px 24px;
 
-  background-color: rgba(33, 150, 243, 0.9); 
+  background-color: rgba(33, 150, 243, 0.9);
 
-  transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition: 250ms;
 
   opacity: 0;
 }
 
-.card:hover .pic-icon .card-text{
+.card:hover .card-text {
   opacity: 1;
   top: 0;
 }
@@ -836,17 +861,17 @@ background: rgba(47, 48, 58, 0.8);
   padding: 24px 20px;
 }
 
-.card-text-info{
-width: 322px;
-height: 168px;
+.card-text-info {
+  width: 322px;
+  height: 168px;
 
-font-size: 18px;
-line-height: 1.55;
-/* or 156% */
+  font-size: 18px;
+  line-height: 1.55;
+  /* or 156% */
 
-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
 
-color: var(--brand-color);
+  color: var(--brand-color);
 }
 
 /*Тексты заголовков 2-й лист*/

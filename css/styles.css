@@ -67,9 +67,9 @@ p {
 }
 
 /*hover-kontaktam*/
-.information:hover,
-.telefone:hover {
+.item:hover .icon-item {
   color: var(--primary-text-color);
+  fill: var(--primary-text-color);
 }
 
 /*Все ховер фокус*/
@@ -194,14 +194,6 @@ p {
   cursor: pointer;
 
   fill: var(--back-color);
-
-  transition-property: fill;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-item :hover {
-  fill: var(--primary-text-color);
 }
 
 /*info@devstudio.com*/
@@ -256,6 +248,7 @@ p {
   background-position: center;
   background-size: cover;
 }
+
 /* Modalka */
 .backdrop {
   position: fixed;
@@ -456,7 +449,7 @@ p {
   width: 370px;
   height: 70px;
   top: 1427px;
-  left: 81px;
+  left: 271px;
 
   color: var(--brand-color);
   background: rgba(47, 48, 58, 0.8);
@@ -471,7 +464,7 @@ p {
   width: 370px;
   height: 70px;
   top: 1427px;
-  left: 476px;
+  left: 665px;
 
   color: var(--brand-color);
   background: rgba(47, 48, 58, 0.8);
@@ -486,7 +479,7 @@ p {
   width: 370px;
   height: 70px;
   top: 1427px;
-  left: 869px;
+  left: 1059px;
 
   color: var(--brand-color);
   background: rgba(47, 48, 58, 0.8);
@@ -780,7 +773,6 @@ p {
 /* Картинки */
 
 /*pic-container*/
-
 .pic-container {
   display: flex;
   flex-wrap: wrap;
@@ -812,17 +804,11 @@ p {
   position: absolute;
   top: 0;
   left: 0;
+
   width: 100%;
   height: 100%;
-  background-color: rgba(33, 150, 243, 0.9);
 
-  transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* Исправить ошибку */
-.pic-container:hover .pic-icon::before {
-  opacity: 1;
-  transform: translateY(-100%);
 }
 
 /* .pic-text:hover */
@@ -837,8 +823,10 @@ p {
 
 .card-text {
   position: absolute;
-  top: 100%;
-  left: 0;
+  top: 0;
+  left: 50%;
+
+  transform: translate(-50%, 100%);
 
   width: 100%;
   height: 100%;
@@ -854,7 +842,7 @@ p {
 
 .card:hover .card-text {
   opacity: 1;
-  top: 0;
+  transform: translate(-50%, 0);
 }
 
 .warpper-text {

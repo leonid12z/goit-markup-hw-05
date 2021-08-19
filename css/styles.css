@@ -738,6 +738,22 @@ p {
   background: var(--primary-text-color);
 }
 
+/* Подпишитесь на рассылку */
+
+.footer-email-input {
+  margin-left: 815px;
+}
+
+.row {
+  font-weight: bold;
+
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--brand-color);
+}
+
 /*ПАРТФОЛИО-html*/
 /*Кнопки*/
 

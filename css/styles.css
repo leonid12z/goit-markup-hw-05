@@ -737,6 +737,7 @@ p {
 
 .button {
   text-align: center;
+  display: inline-block;
 
   font-size: 16px;
   line-height: 1.62;
@@ -752,8 +753,7 @@ p {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-
-  display: inline-block;
+  
   border-radius: 4px;
   padding: 6px 22px;
   font-weight: 500;

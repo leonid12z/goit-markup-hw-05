@@ -16,10 +16,11 @@
   --color-grey: rgba(47, 48, 58, 0.4);
   --color-white: rgba(255, 255, 255, 0.1);
   --color-gradient: #c4c4c4;
+  --border-blu: #188ce8;
 }
 
 body {
-  font-family: "Roboto", "sans-serif";
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.14;
@@ -64,6 +65,10 @@ p {
   padding: 0;
 }
 
+p {
+  display: block;
+}
+
 /*hover-kontaktam*/
 .item:hover .icon-item {
   color: var(--primary-text-color);
@@ -78,41 +83,41 @@ p {
 }
 
 .header {
-  border: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
 }
 
 /*Шапка студия,портфолио,контакты ховер*/
-.nav_item:hover {
+.nav-item:hover {
   color: var(--primary-text-color);
 }
 
 /* main-nav */
-
 .main-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 
 /* Шапка Студия,Портфолио,Контакты */
-
-.nav_list {
+.nav-list {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  margin-left: 93px;
 }
 
 /*Студия,Портфолио,Контакты*/
-
-.nav_list .item {
+.nav-list .item {
   margin-right: 50px;
 }
 
 /*Auth-nav*/
-
 .auth-nav {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 
 .auth-nav .item {
@@ -120,27 +125,24 @@ p {
 }
 
 /*Логотип синий*/
-
-.nav_logo {
+.nav-logo {
   color: var(--primary-text-color);
 }
 
 /*Логотип*/
-
 .logo {
   font-family: "Raleway";
   font-weight: bold;
 
   font-size: 26px;
   line-height: 1.19;
-
   letter-spacing: 0.03em;
+
   color: var(--accent-color);
 }
 
 /*Студия Портфолио*/
-
-.nav_item_list {
+.nav-item-list {
   display: block;
   font-weight: 500;
 
@@ -156,8 +158,7 @@ p {
 }
 
 /*Портфолио*/ /*Котакты*/
-
-.nav_item {
+.nav-item {
   display: block;
   font-weight: 500;
 
@@ -173,7 +174,7 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav_item_list::after {
+.nav-item-list::after {
   display: inline-block;
   position: absolute;
   content: "";
@@ -188,7 +189,6 @@ p {
 }
 
 /* Мыло и телефон */
-
 .icon-item {
   margin-right: 10px;
   cursor: pointer;
@@ -202,22 +202,20 @@ p {
 }
 
 /*info@devstudio.com*/
-
-.information {
+.icon-item {
   font-weight: 500;
 
   color: var(--back-color);
+
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*tel+380961111111*/
-
-.telefone {
+.icon-item {
   font-weight: 500;
   line-height: 1.71;
-
   letter-spacing: 0.03em;
 
   color: var(--back-color);
@@ -228,7 +226,6 @@ p {
 }
 
 /* Класс hero */
-
 .hero {
   text-align: center;
   padding: 200px 0;
@@ -236,7 +233,6 @@ p {
 
 .hero {
   max-width: 1600px;
-
   margin-left: auto;
   margin-right: auto;
 
@@ -253,9 +249,9 @@ p {
 }
 
 /* Modalka */
-
 .backdrop {
   position: fixed;
+
   width: 100%;
   height: 100%;
 
@@ -287,6 +283,7 @@ p {
 
 .button-backdrop {
   position: absolute;
+
   top: 8px;
   right: 8px;
   width: 30px;
@@ -322,7 +319,6 @@ p {
   font-size: 44px;
 
   line-height: 1.36;
-
   letter-spacing: 0.06em;
   text-transform: uppercase;
 
@@ -331,7 +327,7 @@ p {
 
 /*Заказ услуг кнопка*/
 
-.hero_button_form {
+.hero-button-form {
   border: none;
   padding: 10px 32px;
   max-width: 200px;
@@ -339,7 +335,6 @@ p {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-
   letter-spacing: 0.06em;
 
   background-color: var(--primary-text-color);
@@ -349,8 +344,11 @@ p {
   cursor: pointer;
 }
 
-/*Внимание к деталям и текст*/
+.hero-button-form:hover {
+  background: var(--border-blu);
+}
 
+/*Внимание к деталям и текст*/
 .list-item::before {
   display: block;
   content: "";
@@ -387,26 +385,23 @@ p {
   padding: 94px 0;
 }
 
+/*feature-list*/
+.feature-list {
+  display: flex;
+}
+
 .feature-list .item {
   width: 270px;
 }
 
-/*feature-list*/
-
-.feature-list {
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
+.feature-list .item:not(:last-child) {
+  margin-right: 30px;
 }
 
 /*Tekst h2-h3*/
-
 .section-desc {
   margin-bottom: 10px;
-
   font-size: 14px;
-
   text-transform: uppercase;
   letter-spacing: 0.03em;
 
@@ -414,28 +409,26 @@ p {
 }
 
 /*Текст описания товаров, и т.д.*/
-
 .section-text {
   font-size: 14px;
   line-height: 1.71;
-  /* or 171% */
   letter-spacing: 0.03em;
 
   color: var(--back-color);
 }
 
 /* Чем мы занимаемся Изображение pic*/
-
 .pic {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+}
+
+.pic-img {
+  margin-right: 30px;
 }
 
 .pic-title {
   font-size: 14px;
   line-height: 1.14;
-
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -447,7 +440,6 @@ p {
 .span {
   position: absolute;
   text-align: center;
-
   font-weight: bold;
 
   letter-spacing: 0.03em;
@@ -470,14 +462,12 @@ p {
 
   font-size: 36px;
   line-height: 1.16;
-
   letter-spacing: 0.03em;
 
   color: var(--accent-color);
 }
 
 /* Наша команда */
-
 .our-team {
   padding-top: 0;
 }
@@ -488,8 +478,10 @@ p {
 
 .pic-our {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+}
+
+.pic-our .pic-team:not(:last-child) {
+  margin-right: 30px;
 }
 
 .userpic {
@@ -546,7 +538,6 @@ p {
 
   margin-bottom: 10px;
   line-height: 1.18;
-
   letter-spacing: 0.03em;
 
   color: var(--accent-color);
@@ -557,14 +548,12 @@ p {
 
   font-size: 16px;
   line-height: 1.18;
-
   letter-spacing: 0.03em;
 
   color: var(--back-color);
 }
 
 /* Постоянные клиены */
-
 .thumb:hover,
 .thumb-icon:hover {
   fill: var(--primary-text-color);
@@ -573,16 +562,19 @@ p {
 
 .thumb {
   display: flex;
+}
 
-  justify-content: space-between;
-  cursor: pointer;
+.thumb .thumb-icon:not(:last-child) {
+  margin-right: 30px;
 }
 
 .icon-pic {
+  display: flex;
+  align-items: center;
   cursor: pointer;
   justify-content: center;
 
-  padding: 15px 0;
+  height: 100%;
 
   fill: var(--fill-color);
 
@@ -600,7 +592,6 @@ p {
 }
 
 /* Нижняя часть информации */
-
 .footer {
   background-color: var(--background-color);
   padding: 60px 0;
@@ -615,7 +606,7 @@ p {
   font-style: normal;
 }
 
-.nav_logo {
+.nav-logo {
   display: block;
 
   font-family: "Raleway";
@@ -623,32 +614,30 @@ p {
 
   font-size: 26px;
   line-height: 1.19;
-
   letter-spacing: 0.03em;
 
   color: var(--primary-text-color);
 }
 
-/*г.Киев пр-т ЛесиУкр*/
+.logo-nav {
+  color: var(--brand-color);
+}
 
+/*г.Киев пр-т ЛесиУкр*/
 .address-text {
   display: block;
-
+  margin-bottom: 9px;
   line-height: 1.71;
-
   letter-spacing: 0.03em;
 
   color: var(--brand-color);
 }
 
 /*addresa i tel*/
-
 .inform {
   display: block;
-  margin: 0;
-
+  margin-bottom: 9px;
   line-height: 1.71;
-
   letter-spacing: 0.03em;
 
   color: var(--color-backs);
@@ -668,7 +657,7 @@ p {
 
 .footer-container {
   display: flex;
-  align-items: flex-start;
+  align-items: baseline;
 }
 
 .footer-left-side {
@@ -683,12 +672,10 @@ p {
   margin-top: 20px;
 }
 
-.desc-list {
+.desc-linc {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  margin-right: 10px;
 
   width: 44px;
   height: 44px;
@@ -706,29 +693,16 @@ p {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.desc-list:hover {
+.desc-list:not(:last-child) {
+  margin-right: 10px;
+}
+
+.desc-linc:hover {
   background: var(--primary-text-color);
-}
-
-/* Подпишитесь на рассылку */
-
-.footer-email-input {
-  margin-left: 815px;
-}
-
-.row {
-  font-weight: bold;
-
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-
-  color: var(--brand-color);
 }
 
 /*ПАРТФОЛИО-html*/
 /*Кнопки*/
-
 .button-container {
   display: flex;
   justify-content: center;
@@ -741,22 +715,26 @@ p {
 
   font-size: 16px;
   line-height: 1.62;
-
   letter-spacing: 0.03em;
 
   color: var(--accent-color);
+  background-color: var(--color-brand);
 
   border: none;
-  margin-right: 8px;
+  
   cursor: pointer;
 
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  
+
   border-radius: 4px;
   padding: 6px 22px;
   font-weight: 500;
+}
+
+.but:not(:last-child) {
+  margin-right: 8px;
 }
 
 .button:hover {
@@ -765,7 +743,6 @@ p {
 }
 
 /* Картинки */
-
 /*pic-container*/
 .pic-container {
   display: flex;
@@ -787,7 +764,6 @@ p {
 
 .pic-icon {
   position: relative;
-
   overflow: hidden;
 }
 
@@ -862,10 +838,9 @@ p {
 
 .subject {
   font-weight: bold;
-
   font-size: 18px;
   line-height: 2;
-
+  margin-top: 4px;
   letter-spacing: 0.06em;
 
   color: var(--accent-color);
@@ -873,15 +848,10 @@ p {
 
 .subtitle-text {
   font-weight: normal;
-
   font-size: 16px;
   line-height: 1.87;
-
   letter-spacing: 0.03em;
 
   color: var(--back-color);
 }
 
-.logo_nav {
-  color: var(--brand-color);
-}
